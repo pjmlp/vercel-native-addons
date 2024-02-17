@@ -3,7 +3,7 @@
     "license": "MIT",
     "private": true,
     "dependencies": {
-        "hello": "file:packages/cpp-src"
+        "hello": "file:packages/cpp"
     },
     "devDependencies": {
       "@types/node": "^17.0.42",
