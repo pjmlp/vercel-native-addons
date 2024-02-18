@@ -1,0 +1,3 @@
+{
+    "installCommand": "amazon-linux-extras install rust1"
+}
