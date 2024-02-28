@@ -4,8 +4,7 @@
     "private": true,
     "type": "module",
     "dependencies": {
-        "hello": "file:packages/cpp",
-        "hello-rust": "file:packages/rust"
+        "hello": "file:packages/cpp"
     },
     "devDependencies": {
       "@types/node": "^17.0.42",
