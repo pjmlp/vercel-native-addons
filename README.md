@@ -1,13 +1,15 @@
 
 # Node.js Hello World
 
-Simple Node.js + Vercel example that shows how to have an API in Vercel, using addons written in C++ and Rust, to work as a template for future projects.
+Simple Node.js + Vercel example that shows how to have an API in Vercel, using nodejs addons written in C++, or serverless functions in Go and Rust, to work as a template for future projects.
 
 ## Overview
 
-The API entry points are located under `api` folder, while the specific C++ and Rust addons are made available as local packages, under `packages`.
+The API entry points are located under `api` folder, while the specific C++ addons are made available as local packages, under `packages`.
 
 The mechanism to actually keep the native addons around after a deployment, without messing around with bundlers, trying to fit the output into Vercel's infrastructure, is to basically bundle them as proper packages.
+
+For Go and Rust such trick isn't required, as they are directly supported via Vercel (for Go) and community (for Rust), language configurations.
 
 
 ## How to Use
