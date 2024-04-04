@@ -11,6 +11,8 @@ The mechanism to actually keep the native addons around after a deployment, with
 
 For Go and Rust such trick isn't required, as they are directly supported via Vercel (for Go) and community (for Rust), language configurations.
 
+Currently there are some issues if using Node 20 instead of the default Node 18, as configured on Vercel projects.
+
 
 ## How to Use
 
