@@ -8,5 +8,5 @@ import (
 func Handler(w http.ResponseWriter, r *http.Request) {
   w.Header().Set("Content-Type", "application/json")
 
-  fmt.Fprintf(w, "{'message': 'Hello Go world'}")
+  fmt.Fprintf(w, `{"message": "Hello Go world"}`)
 }
