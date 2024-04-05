@@ -1,7 +1,7 @@
 
 # Node.js Hello World
 
-Simple Node.js + Vercel example that shows how to have an API in Vercel, using nodejs addons written in C++, or serverless functions in Go and Rust, to work as a template for future projects.
+Simple Node.js + Vercel example that shows how to have an API in Vercel, using nodejs addons written in C++, or serverless functions in TypesScript, Go and Rust, to work as a template for future projects.
 
 ## Overview
 
@@ -33,3 +33,7 @@ Then run the app at the root of the repository:
 ```bash
 vercel dev
 ```
+
+## How to test
+
+An Open API configuration file is available ([openapi.yaml](openapi.yaml)), which can be imported into [Swagger Editor](https://editor.swagger.io/) for an easy to test the APIs, instead of calling them directly on the browser, or via curl.
