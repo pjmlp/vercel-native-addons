@@ -6,5 +6,7 @@ import (
 )
  
 func Handler(w http.ResponseWriter, r *http.Request) {
-  fmt.Fprintf(w, "`Hello Go world`")
+  w.Header().Set("Content-Type", "application/json")
+
+  fmt.Fprintf(w, "{'message': 'Hello Go world'}")
 }
