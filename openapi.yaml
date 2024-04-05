@@ -1,0 +1,79 @@
+openapi: 3.0.3
+info:
+  title: Vercel Native Addons Example
+  description: |-
+    Shows how to extend the Vercel's Next.js template with node.js native addons written in TypeScript, C++, Go and Rust. 
+  license:
+    name: GPL 2.0
+    url: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+  version: 1.0.11
+servers:
+  - url: https://vercel-native-addons.vercel.app
+tags:
+  - name: hello
+    description: Saying Hello in Typescript
+paths:
+  /api/hello:
+    get:
+      tags:
+        - hello
+      summary: Greetings from the world of Typescript
+      description: Returns a simple Hello World message
+      operationId: hello
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Hello'          
+  /api/hello-cpp:
+    get:
+      tags:
+        - hello
+      summary: Greetings from the world of C++
+      description: Returns a simple Hello World message
+      operationId: helloCpp
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Hello'        
+  /api/hello-go:
+    get:
+      tags:
+        - hello
+      summary: Greetings from the world of Go
+      description: Returns a simple Hello World message
+      operationId: helloGo
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Hello'    
+  /api/hello-rust:
+    get:
+      tags:
+        - hello
+      summary: Greetings from the world of Rust
+      description: Returns a simple Hello World message
+      operationId: helloRust
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Hello'                    
+
+components:
+  schemas:
+    Hello:
+      type: object
+      properties:
+        message:
+          type: string
