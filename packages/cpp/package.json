@@ -1,21 +1,26 @@
 {
-    "name": "hello",
-    "version": "1.0.0",
-    "author": "Paulo Pinto",
-    "description": "An example of a C++ addon package",
-    "main": "hello.mjs",
-    "private": true,
-    "engines": {
-        "node": ">=18",
-        "npm": "Please use Yarn"
-    },
-    "license": "GPL-2.0-or-later",
-    "scripts": {
-        "test": "node test/testmodule.mjs"
-    },
-    "devDependencies": {
-      "node-loader": "^2.0.0",
-      "typescript": "4.9.3"
-    }
+  "name": "hello",
+  "version": "1.0.0",
+  "author": "Paulo Pinto",
+  "description": "An example of a C++ addon package",
+  "main": "hello.mjs",
+  "private": true,
+  "engines": {
+      "node": ">=18",
+      "npm": "Please use Yarn"
+  },
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+      "test": "node test/testmodule.mjs",
+      "install": "cmake-js compile"
+  },
+      "dependencies": {
+      "bindings": "~1.2.1",
+      "node-addon-api": "^1.0.0"
+  },      
+  "devDependencies": {
+    "node-loader": "^2.0.0",
+    "typescript": "4.9.3",
+    "cmake-js": "^7.3.0"
   }
-  
+}
