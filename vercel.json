@@ -1,5 +1,5 @@
 {
-    "installCommand": "dnf install -y cmake",
+    "installCommand": "yarn add cmake-js && dnf install -y cmake",
     "functions": {
       "api/hello-rust.rs": {
         "runtime":  "vercel-rust@4.0.6"
