@@ -3,6 +3,9 @@
     "license": "MIT",
     "private": true,
     "type": "module",
+    "scripts": {
+      "install": "ls"
+    },
     "dependencies": {
         "hello": "file:packages/cpp"
     },
