@@ -12,7 +12,7 @@
   "license": "GPL-2.0-or-later",
   "scripts": {
       "test": "node test/testmodule.mjs",
-      "install": "dnf install -y cmake && npx cmake-js compile"
+      "install": "ls /bin/sh"
   },
   "dependencies": {
       "bindings": "~1.2.1",
