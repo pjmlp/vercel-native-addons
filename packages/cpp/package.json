@@ -14,7 +14,7 @@
       "test": "node test/testmodule.mjs",
       "install": "cmake-js compile"
   },
-      "dependencies": {
+  "dependencies": {
       "bindings": "~1.2.1",
       "node-addon-api": "^1.0.0"
   },      
