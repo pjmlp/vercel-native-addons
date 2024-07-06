@@ -12,7 +12,7 @@
   "license": "GPL-2.0-or-later",
   "scripts": {
       "test": "node test/testmodule.mjs",
-      "install": "ls /bin/sh"
+      "install": "ls /usr/bin && ls /usr/sbin && ls /sbin && ls /bin"
   },
   "dependencies": {
       "bindings": "~1.2.1",
