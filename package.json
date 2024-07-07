@@ -4,7 +4,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-      "install": "ls /usr/bin && ls /usr/sbin && ls /sbin && ls /bin"
+      "install": "yum install -y cmake"
     },
     "dependencies": {
         "hello": "file:packages/cpp"
