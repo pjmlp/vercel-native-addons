@@ -11,8 +11,7 @@
   },
   "license": "GPL-2.0-or-later",
   "scripts": {
-      "test": "node test/testmodule.mjs",
-      "install": "ls /usr/bin"
+      "test": "node test/testmodule.mjs"
   },
   "dependencies": {
       "bindings": "~1.2.1",
