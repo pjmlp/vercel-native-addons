@@ -1,9 +1,10 @@
 use serde_json::json;
-use vercel_runtime::{run, Body, Error, Request, Response, StatusCode};
+use vercel_runtime::{Error, Request, Body, Response, StatusCode, run, service_fn};
 
 #[tokio::main]
 async fn main() -> Result<(), Error> {
-    run(handler).await
+    let service = service_fn(handler);
+    run(service).await
 }
 
 pub async fn handler(_req: Request) -> Result<Response<Body>, Error> {
