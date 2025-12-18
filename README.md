@@ -9,10 +9,7 @@ The API entry points are located under `api` folder, while the specific C++ addo
 
 The mechanism to actually keep the native addons around after a deployment, without messing around with bundlers, trying to fit the output into Vercel's infrastructure, is to basically bundle them as proper packages.
 
-For Go and Rust such trick isn't required, as they are directly supported via Vercel (for Go) and community (for Rust), language configurations.
-
-Currently there are some issues if using Node 20 instead of the default Node 18, as configured on Vercel projects.
-
+For Go and Rust such trick isn't required, as they are directly supported by Vercel as official runtimes.
 
 ## How to Use
 

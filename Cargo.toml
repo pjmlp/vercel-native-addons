@@ -1,16 +1,22 @@
 [package]
 name = "hello-rust-api"
-version = "0.1.0"
-edition = "2021"
-
+version = "0.2.0"
+edition = "2024"
+ 
 [dependencies]
-tokio = { version = "1", features = ["macros"] }
-serde_json = { version = "1", features = ["raw_value"] }
-
-# Documentation: https://docs.rs/vercel_runtime/latest/vercel_runtime
-vercel_runtime = { version = "1.1.4" }
+tokio = { version = "1", features = ["full"] } # async runtime
+vercel_runtime = { version = "2" } # handles communicating with Vercel's function bridge
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
 
 # Each handler has to be specified as [[bin]]
+# Note that you need to provide unique names for each binary
 [[bin]]
 name = "hello-rust"
 path = "api/hello-rust.rs"
+ 
+# This section configures settings for the release profile, which optimizes the build for performance.
+[profile.release]
+codegen-units = 1
+lto = "fat"
+opt-level = 3

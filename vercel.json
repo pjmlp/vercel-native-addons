@@ -1,9 +1,4 @@
 {
-    "functions": {
-      "api/hello-rust.rs": {
-        "runtime":  "vercel-rust@4.0.8"
-      }
-    },
     "headers": [
       {
         "source": "/api/(.*)",
