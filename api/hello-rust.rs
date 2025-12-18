@@ -1,5 +1,5 @@
-use serde_json::json;
-use vercel_runtime::{Error, Request, Body, Response, StatusCode, run, service_fn};
+use serde_json::{Value, json};
+use vercel_runtime::{Error, Request, run, service_fn};
 
 #[tokio::main]
 async fn main() -> Result<(), Error> {
@@ -7,15 +7,9 @@ async fn main() -> Result<(), Error> {
     run(service).await
 }
 
-pub async fn handler(_req: Request) -> Result<Response<Body>, Error> {
-    Ok(Response::builder()
-        .status(StatusCode::OK)
-        .header("Content-Type", "application/json")
-        .body(
-            json!({
-              "message": "Hello Rust World"
-            })
-            .to_string()
-            .into(),
-        )?)
+
+async fn handler(_req: Request) -> Result<Value, Error> {
+    Ok(json!({
+        "message": "Hello Rust World",
+    }))
 }
